@@ -7,52 +7,42 @@ void main()
 {
 	setlocale(LC_CTYPE, "RUS");
 
-	while (1)
+	do
 	{
-
-
 		long long int n;
 		scanf("%lld", &n);
 
-		int _t22 = t22(n);
-		int _t23 = t23(n);
-		int _t24 = t24(n);
-		int _t25 = t25(n);
-		int _t26 = t26(n);
-		int _t27 = t27(n);
-		int _t28 = t28(n);
-		int _t29 = t29(n);
-		int _t210 = t210(n);
-		int _t211 = t211(n);
-		int _t212 = t212(n);
-
-		int temp;
-		int count = 0;
-		while (n > 0) {
-			temp = n % 10;
-			n /= 10;
-
-			if (temp == 3)
-				count++;
-		}
-		printf("Задание 1\n%d\n", count);
-		printf("Задание 2\n%d\n", _t22);
-		printf("Задание 3\n%d\n", _t23);
-		printf("Задание 4\n%d\n", _t24);
-		printf("Задание 5\n%d\n", _t25);
-		printf("Задание 6\n%d\n", _t26);
-		printf("Задание 7\n%d\n", _t27);
-		printf("Задание 8\n%d\n", _t28);
-		printf("Задание 9\n%d\n", _t29);
-		printf("Задание 10\n%d\n", _t210);
-		printf("Задание 11\n%d\n", _t211);
-		printf("Задание 12\n%d\n", _t212);
+		printf("Задание 1\n%d\n", t21(n));
+		printf("Задание 2\n%d\n", t22(n));
+		printf("Задание 3\n%d\n", t23(n));
+		printf("Задание 4\n%d\n", t24(n));
+		printf("Задание 5\n%d\n", t25(n));
+		printf("Задание 6\n%d\n", t26(n));
+		printf("Задание 7\n%d\n", t27(n));
+		printf("Задание 8\n%d\n", t28(n));
+		printf("Задание 9\n%d\n", t29(n));
+		printf("Задание 10\n%d\n", t210(n));
+		printf("Задание 11\n%d\n", t211(n));
+		printf("Задание 12\n%d\n", t212(n));
 
 		char a;
 		printf("Нажмите кнопку \"n\" для выхода! ");
 		if ((a = getchar()) == 'n') break;
-	}
+	} while (1);
 
+}
+
+int t21(long long int n) {
+	int temp;
+	int count = 0;
+	while (n > 0) {
+		temp = n % 10;
+		n /= 10;
+
+		if (temp == 3)
+			count++;
+	}
+	return count;
 }
 
 int t22(long long int n) {
